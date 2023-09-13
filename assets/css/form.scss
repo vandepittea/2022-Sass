@@ -1,0 +1,35 @@
+@use 'colors';
+@use 'mixins';
+@use 'constants';
+
+form{
+  margin: 3rem 2rem;
+
+  fieldset{
+    padding: 1rem;
+    border: colors.$complement-neutral-color 0.1rem dashed;
+    text-align: center;
+
+    legend{
+      @include mixins.h;
+      font-size: constants.$biggest-font-size;
+      text-align: left;
+    }
+
+    input[type=email]{
+      background-color: colors.$green-color;
+      border: none;
+      height: 1.2rem;
+
+      &:focus{
+        background-color: colors.$orange-color;
+        outline: none;
+      }
+    }
+
+    input[type=submit]{
+      background-color: colors.$neutral-color;
+      border: colors.$complement-neutral-color 0.1rem solid;
+    }
+  }
+}

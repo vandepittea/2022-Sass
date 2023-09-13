@@ -1,0 +1,27 @@
+@use 'colors';
+
+footer{
+  background-color: colors.$complement-neutral-color;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+
+  li{
+    margin-bottom: 0.5rem;
+
+    a{
+      color: colors.$neutral-color;
+      text-decoration: none;
+
+      &:hover{
+        border-bottom: colors.$neutral-color 0.1rem solid;
+      }
+    }
+  }
+
+  img{
+    width: 5%;
+    margin-bottom: 0;
+    align-self: end;
+  }
+}

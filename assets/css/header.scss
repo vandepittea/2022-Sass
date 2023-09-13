@@ -1,0 +1,38 @@
+@use 'colors';
+@use 'constants';
+
+header{
+  text-align: center;
+  margin-top: 2rem;
+
+  h1{
+    margin-bottom: 2rem;
+  }
+
+  nav{
+    margin-bottom: 2rem;
+
+    li {
+      display: inline-block;
+
+      a {
+        font-family: constants.$header-font;
+        text-decoration: none;
+        font-weight: bold;
+        color: colors.$complement-neutral-color;
+        padding: 0.5rem 1.5rem 0.5rem 0.1rem;
+        border-right: colors.$grey-color 0.1rem solid;
+        border-left: colors.$neutral-color 1rem solid;
+
+        &:hover{
+          color: colors.$pink-color;
+          border-left: colors.$pink-color 1rem solid;
+        }
+      }
+
+      &:last-child a{
+        border-right: none;
+      }
+    }
+  }
+}

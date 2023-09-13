@@ -1,0 +1,134 @@
+@use 'colors';
+@use 'constants';
+@use 'mixins';
+
+body{
+  font-family: constants.$default-font;
+  background-color: colors.$neutral-color;
+  color: colors.$complement-neutral-color;
+  font-size: constants.$default-font-size;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+section.introduction{
+  text-align: center;
+  background-color: colors.$complement-neutral-color;
+  color: colors.$neutral-color;
+  padding: 2rem;
+  margin-bottom: 2rem;
+
+  h2{
+    @include mixins.h;
+    font-size: constants.$biggest-font-size;
+  }
+
+  a{
+    text-decoration: none;
+    color: colors.$green-color;
+    font-weight: bold;
+    border-bottom: colors.$green-color 0.01rem solid;
+
+    &:hover{
+      border: none;
+    }
+  }
+}
+
+section{
+  width: 94%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+
+  h2{
+    @include mixins.h;
+    font-size: constants.$middle-font-size;
+  }
+
+  .wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    article{
+      width: calc(100% / 3 - 3rem);
+      margin-bottom: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &:last-child{
+        margin-right: 0;
+      }
+
+      img{
+        max-width: 100%;
+      }
+
+      h3{
+        @include mixins.h;
+        font-size: constants.$middle-font-size;
+        margin-bottom: 0;
+      }
+
+      h4{
+        font-size: constants.$small-font-size;
+        margin-bottom: 1rem;
+
+        em{
+          @include mixins.em;
+        }
+      }
+
+      div + a{
+        width: max-content;
+        background-color: colors.$pink-color;
+        color: colors.$neutral-color;
+        padding: 0.5rem 1rem 0.5rem 1rem;
+      }
+    }
+  }
+}
+
+aside{
+  display: flex;
+  background-color: colors.$grey-color;
+  margin-bottom: 2rem;
+
+  div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1rem;
+
+    h2{
+      @include mixins.h;
+      font-size: constants.$biggest-font-size;
+    }
+
+    h3{
+      font-size: constants.$middle-font-size;
+
+      em{
+        @include mixins.em;
+        background-color: colors.$green-color;
+      }
+    }
+
+    li{
+      display: inline-block;
+      margin-top: 0.5rem;
+
+      + li::before{
+        content: "// ";
+      }
+
+      a{
+        color: colors.$complement-neutral-color;
+      }
+    }
+  }
+}

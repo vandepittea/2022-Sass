@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "BrutalBold";
+  src: url("../fonts/brutal-bold.woff2") format("woff2")
+}
+@font-face {
+  font-family: "Brutal";
+  src: url("../fonts/brutal.woff2") format("woff2")
+}
+@font-face {
+  font-family: "New Grotesk Square Bold";
+  src: url("../fonts/new-grotesk-square.woff2") format("woff2")
+}
+
+$default-font: Brutal, Arial, Helvetica, sans-serif;
+$bolder-font: "BrutalBold", Arial, Helvetica, sans-serif;
+$header-font: Georgia, Cambria, 'Times New Roman', Times, sans-serif;
+$secondary-font: "New Grotesk Square Bold", Arial, Helvetica, sans-serif;
+
+$small-font-size: 0.8rem;
+$default-font-size: 1rem;
+$biggest-font-size: 2rem;
+$middle-font-size: 1.2rem;

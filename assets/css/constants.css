@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "BrutalBold";
+  src: url("../fonts/brutal-bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Brutal";
+  src: url("../fonts/brutal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "New Grotesk Square Bold";
+  src: url("../fonts/new-grotesk-square.woff2") format("woff2");
+}
+
+/*# sourceMappingURL=constants.css.map */
